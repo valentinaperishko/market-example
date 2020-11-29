@@ -1,0 +1,18 @@
+.about {
+    display: flex;
+    flex-flow: column;
+    background: rgb(1, 378, 3);
+    height: 400px;
+}
+
+.housesList {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+.housesItem {
+    display: flex;
+    flex-flow: column;
+    align-items:  center;
+}
