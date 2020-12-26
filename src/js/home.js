@@ -9,7 +9,7 @@ const homeTitle = document.createElement("h2");
 // console.log(homeTitle);
 
 homeTitle.textContent = "HOUSE";
-home.appendChild(homeTitle);
+// home.appendChild(homeTitle);
 
 const homeContent = document.createElement("p");
 // console.log(homeContent);

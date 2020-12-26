@@ -1,0 +1,15 @@
+{{#each this}}
+<li class="postItem">
+  <img src="{{picture}}" alt="{{title}}" class="img">
+  <h3>{{title}}</h3>
+  <ul>
+    {{#each tags}}
+    <li>{{this}}</li>
+    {{/each}}
+  </ul>
+  <p>{{text}}</p>
+  {{{teg}}}
+  </li>
+  {{/each}}
+  {{!-- raw: {{{specialChars}}}
+  html-escaped: {{specialChars}} --}}

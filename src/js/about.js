@@ -40,12 +40,12 @@ function createItem(array){
         const imageContainer = document.createElement("div");
         imageContainer.classList.add("imageWrapper");
         imageContainer.append(...pictures);
-        console.log(imageContainer);
+        // console.log(imageContainer);
         const housePrice = document.createElement("p");
         housePrice.textContent = `${price}$`;
 
         houseItem.append(houseName, imageContainer, housePrice);
-        housesList.append(houseItem);
+        return houseItem;
         // console.log(houseItem);
     });
     // console.log(li);
@@ -53,7 +53,7 @@ function createItem(array){
 }
 
 
-console.log(createItem(houses));
+// console.log(createItem(houses));
 const a = createItem(houses);
 // console.log(a);
 housesList.append(...a);

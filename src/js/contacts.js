@@ -23,17 +23,20 @@ contacts.append(...buttons);
 
 //Универсальная функция, вернет рандомный индекс любого массива//
 function randomIdx(array) {
-    let idx = Math.round(Math.random()*(array.length -1));
-    console.log(idx);
+    let idx = Math.round(Math.random()*(array.length - 1));
+    // console.log(idx);
     return idx;
 }
-randomIdx(game);
-contacts.addEventListener("click", (e)=>{
-//    console.log(e.target.dataset.value);
-const p = document.createElement("p");
-contacts.append(p);
-   myGame(e, game) 
+// randomIdx(game);
 
+
+const p = document.createElement("p");
+p.style.fontSize = '30px';
+contacts.append(p);
+
+contacts.addEventListener("click", (e)=>{
+// console.log(e.target.dataset.value);
+p.textContent = myGame(e, game, p)
 });
 
 function myGame(e, array, place) {
@@ -42,21 +45,16 @@ function myGame(e, array, place) {
 
     let comp = array[randomIdx(array)];
     console.log(comp);
-    let msg;
-
+    let msg = place.textContent;
     if(user === comp){
-        // console.log("нычья");
         msg = `user: ${user} - comp: ${comp} = нычья`;
     } else {
         if((user === "stone" && comp === "scissors") || (user === "scissors" && comp === "paper") || 
         (user === "paper" && comp === "stone")) {
-            // console.log(`user with value ${user} won`);
             msg = `user with value ${user} won`;
         } else {
-            // console.log(`comp with value ${comp} won`);
             msg = `comp with value ${comp} won`;
         }
     }
-    place.textContent = msg;
+    return msg;
 }
-myGame(game);
